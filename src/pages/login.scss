@@ -4,8 +4,10 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 28px;
     margin: auto;
+    margin-top: 2rem;
     border-radius: 10px;
 }
+
 
 .form-title{
     font-size: 26px;
@@ -17,11 +19,50 @@
     border-bottom: solid 1px white;
 }
 
+.main-user-info-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.user-input-box-login{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.user-input-box-login label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.user-input-box-login input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
 .main-user-info{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 0;
+}
+
+.user-input-photo {
+    margin-top: 2rem;
+}
+.user-input-photo input{
+    margin-left: 2rem;
 }
 
 .user-input-box:nth-child(2n){
@@ -68,31 +109,48 @@
     padding: 0 20px 0 5px;
 }
 
-.gender-category label,
-.gender-category input,
-.form-submit-btn input{
-    cursor: pointer;
-}
+
 
 .form-submit-btn{
     margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-submit-btn input{
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 10px;
-    border:none;
-    border-radius: 3px;
-    color: rgb(209, 209, 209);
-    background: #FF00FF5D;
+    color: white;
+    padding-block: 12px;
+    width: 190px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.02rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #1e0250e6;
+    cursor: pointer;
+    transition: all .1s ease-in;
 }
 
 .form-submit-btn input:hover{
     background: #c702c7;
     color: rgb(255, 255, 255);
+}
+
+.link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.link a{
+    color: #333;
+    cursor: pointer;
+}
+
+.link a:hover{
+    text-decoration: underline;
 }
 
 @media(max-width: 600px){

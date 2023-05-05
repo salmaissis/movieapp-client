@@ -33,10 +33,11 @@ const Header = () => {
                     <Link to="/">MovieApp</Link>
                 </div>
                 <ul className="header__nav">
-                    <li><Link to="/" className={`${pathname == '/' ? 'active' : ''}`}>Home</Link></li>
-                    <li><Link to="/movie" className={`${pathname == '/movie' ? 'active' : ''}`}>Movies</Link></li>
-                    <li><Link to="/tv" className={`${pathname == '/tv' ? 'active' : ''}`}>TV Series</Link></li>
-                    <li><Link to="/login" className={`${pathname == '/login' ? 'active' : ''}`}>Login</Link></li>
+                    <li className={`${pathname == '/' ? 'active' : ''}`}><Link to="/">Home</Link></li>
+                    <li className={`${pathname == '/movie' ? 'active' : ''}`}><Link to="/movie">Movies</Link></li>
+                    <li className={`${pathname == '/tv' ? 'active' : ''}`}><Link to="/tv">TV Series</Link></li>
+                    <li  className={`${pathname == '/register' ? 'active' : ''}`}><Link to="/register">Register</Link></li>
+                    <li className={`${pathname == '/favorites' ? 'active' : ''}`}><Link to="/favorites">Favorites</Link></li>
                 </ul>
             </div>
         </div>
