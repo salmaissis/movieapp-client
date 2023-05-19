@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { HeartFill } from "react-bootstrap-icons"
 import { useParams } from 'react-router';
 
 import tmdbApi from '../../api/tmdbApi';
@@ -9,6 +10,8 @@ import CastList from './CastList';
 import VideoList from './VideoList';
 
 import MovieList from '../../components/movie-list/MovieList';
+import Header from '../../components/header/Header';
+import { stringify } from 'query-string';
 
 const Detail = () => {
 
@@ -25,8 +28,17 @@ const Detail = () => {
         getDetail();
     }, [category, id]);
 
+    const addToFav = (item) => {
+        const favs = JSON.parse(localStorage.getItem('favs'));
+        favs.push(item);
+        console.log(favs);
+        localStorage.setItem('favs', JSON.stringify(favs))
+        sessionStorage.setItem('category', window.location.pathname.split("/")[1]);
+    }
+
     return (
         <>
+        <Header/>
             {
                 item && (
                     <>
@@ -45,6 +57,7 @@ const Detail = () => {
                                             <span key={i} className="genres__item">{genre.name}</span>
                                         ))
                                     }
+                                    <button className="add-to-fav-btn" onClick={()=> addToFav(item)}><HeartFill color="#a10574" size={20}/></button>
                                 </div>
                                 <p className="overview">{item.overview}</p>
                                 <div className="cast">

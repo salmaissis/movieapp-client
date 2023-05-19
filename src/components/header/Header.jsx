@@ -36,7 +36,6 @@ const Header = () => {
                     <li className={`${pathname == '/' ? 'active' : ''}`}><Link to="/">Home</Link></li>
                     <li className={`${pathname == '/movie' ? 'active' : ''}`}><Link to="/movie">Movies</Link></li>
                     <li className={`${pathname == '/tv' ? 'active' : ''}`}><Link to="/tv">TV Series</Link></li>
-                    <li  className={`${pathname == '/register' ? 'active' : ''}`}><Link to="/register">Register</Link></li>
                     <li className={`${pathname == '/favorites' ? 'active' : ''}`}><Link to="/favorites">Favorites</Link></li>
                 </ul>
             </div>
