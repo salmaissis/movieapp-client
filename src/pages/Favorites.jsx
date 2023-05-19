@@ -1,5 +1,8 @@
 import Header from '../components/header/Header';
 import MovieCard from '../components/movie-card/MovieCard';
+import './favorites.scss';
+
+import { SwiperSlide, Swiper } from 'swiper/react';
 import { category } from '../api/tmdbApi';
 
 
@@ -11,7 +14,22 @@ const Favorites = () => {
     return (
         <>
             <Header/>
-            {favs.map(item => <MovieCard item={item} category={category[svedcategory]}/>)}
+            <div className="movie-list">
+            <Swiper
+                grabCursor={true}
+                spaceBetween={50}
+                slidesPerView={'auto'}
+            >
+            {
+                favs.map((item, i) => (
+                    <SwiperSlide key={i}>
+                        <MovieCard item={item} category={category[svedcategory]}/>
+                    </SwiperSlide>
+                ))
+           }
+           </Swiper>
+           </div>
+            
         </>
     )
 }
